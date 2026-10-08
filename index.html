@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="my">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>RecapMaster</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<header><div class="logo">🎬</div><div><h1>RecapMaster</h1><p>Movie Recap • Subtitle • Myanmar Voice</p></div></header>
+
+<main>
+<section class="card">
+<h2>1. Source Video</h2>
+<input id="url" placeholder="https://www.youtube.com/watch?v=...">
+<button id="process">▶ Start Recap</button>
+<label class="upload">📁 Or choose a video/audio file
+<input id="file" type="file" accept="video/*,audio/*">
+</label>
+</section>
+
+<section class="card">
+<h2>2. Language & Voice</h2>
+<div class="grid">
+<select id="source">
+<option value="auto">Auto Detect</option>
+<option value="en">English</option><option value="my">Myanmar</option>
+<option value="ja">Japanese</option><option value="ko">Korean</option>
+<option value="zh">Chinese</option><option value="es">Spanish</option>
+</select>
+<select id="target"><option value="my">🇲🇲 Myanmar</option><option value="en">English</option></select>
+<select id="voice">
+<option value="my-MM-ThihaNeural">👨 Thiha</option>
+<option value="my-MM-NilarNeural">👩 Nilar</option>
+</select>
+</div>
+</section>
+
+<section class="card">
+<h2>3. Processing</h2>
+<div class="status" id="status">Ready.</div>
+<div class="bar"><i id="bar"></i></div>
+</section>
+
+<section class="card result" id="result">
+<h2>4. Results</h2>
+<h3>🎬 Movie Recap</h3><textarea id="recap"></textarea>
+<h3>🌐 Translation</h3><textarea id="translation"></textarea>
+<h3>📝 Subtitle SRT</h3><textarea id="srt"></textarea>
+<div class="buttons">
+<a id="recapDl">Download Recap</a>
+<a id="srtDl">Download SRT</a>
+<a id="txtDl">Download Translation</a>
+<a id="audioDl">Download Voice</a>
+</div>
+</section>
+</main>
+<script src="/static/app.js"></script>
+</body>
+</html>
